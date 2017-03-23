@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from attendance import views
 
 urlpatterns = [
-    url(r'^', 'attendance.views.attendance_count', name='attendance_count'),
-    url(r'^', 'attendance.views.class_mood', name='class_mood'),
+    url(r'^', views.attendance_count, name='attendance_count'),
+    url(r'^', views.class_mood, name='class_mood'),
 ]
