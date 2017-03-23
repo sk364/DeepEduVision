@@ -17,6 +17,6 @@ from django.conf.urls import url
 from django.contrib import admin
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^attendance/', include('attendance.urls'), name='attendance'),
+    url(r'^', 'attendance.views.attendance_count', name='attendance_count'),
+    url(r'^', 'attendance.views.class_mood', name='class_mood'),
 ]
